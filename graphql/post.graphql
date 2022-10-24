@@ -1,0 +1,11 @@
+extend type Query {  
+
+    paginateposts: [Post!]! @paginate #its for all post info with paginate
+}
+
+type Post {
+    id: ID
+    title: String
+    content: String
+    author: User! @belongsTo
+}
